@@ -14,6 +14,12 @@ Check the issues and pull requests in this repository for examples of what AutoP
 Warning: This Github Action is currently **in development**, and in **alpha release**.
 If you're interested in using this action, please reach out on [Discord](https://discord.gg/vz7p9TfHsh).
 
+## If you don't yet have access to GPT-4
+
+If you've got a cool idea you'd like to try out AutoPR with, feel free to make an issue in this repository, and I'll run it manually.
+
+## Using your own token
+
 You may press "Use this template" to create a new repository with the AutoPR workflow file, or copy it to your own repository manually.
 
 You will also need to perform the following steps:
