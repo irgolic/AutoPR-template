@@ -4,7 +4,7 @@
 
 [![Discord](https://badgen.net/badge/icon/discord?icon=discord&label&color=purple)](https://discord.gg/ykk7Znt3K6)
 
-[AutoPR](https://github.com/irgolic/AutoPR) automatically writes pull requests in response to issues.
+[AutoPR](https://github.com/irgolic/AutoPR) automatically writes pull requests in response to issues.  
 Check the issues and pull requests in this repository for examples of what AutoPR can do.
 
 </div>
