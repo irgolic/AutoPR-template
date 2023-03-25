@@ -18,6 +18,8 @@ If you're interested in using this action, please reach out on [Discord](https:/
 
 If you've got a cool idea you'd like to try out AutoPR with, feel free to make an issue in this repository, and I'll run it manually.
 
+Alternatively, you could use one of the older models (`text-davinci-003` or `chatgpt-3.5-turbo`), just override the `model` and `context_limit` input variables.
+
 ## Using your own token
 
 You may press "Use this template" to create a new repository with the AutoPR workflow file, or copy it to your own repository manually.
