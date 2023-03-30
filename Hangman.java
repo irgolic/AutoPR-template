@@ -24,7 +24,33 @@ public class Hangman {
     
     public static boolean playGame(Scanner scanner) {
         // TODO: Implement the game logic
-        return false;
+        String word = getRandomWord();
+        StringBuilder guessedWord = new StringBuilder(word.replaceAll(".", "_"));
+        int attemptsLeft = 6;
+        boolean guessed = false;
+        
+        while (attemptsLeft > 0) {
+            System.out.println("Word: " + guessedWord);
+            System.out.print("Guess a letter: ");
+            char letter = scanner.next().toLowerCase().charAt(0);
+
+            if (word.indexOf(letter) >= 0) {
+                for (int i = 0; i < word.length(); i++) {
+                    if (word.charAt(i) == letter) {
+                        guessedWord.setCharAt(i, letter);
+                    }
+                }
+                if (!guessedWord.toString().contains("_")) {
+                    guessed = true;
+                    break;
+                }
+            } else {
+                attemptsLeft--;
+                System.out.println("Incorrect guess! You have " + attemptsLeft + " attempts left.");
+            }
+        }
+        System.out.println(guessed ? "Congratulations, you guessed the word!" : "Sorry, you ran out of attempts. The word was " + word + ".");
+        return guessed;
     }
     private static String getRandomWord() {
         Random random = new Random();
