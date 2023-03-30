@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Random;
 
 public class Hangman {
 
@@ -15,6 +17,7 @@ public class Hangman {
             String userChoice = scanner.next().toLowerCase();
             if (!userChoice.equals("yes")) {
                 playing = false;
+        private static final String[] words = {"apple", "banana", "cherry", "date", "fig", "grape", "kiwi", "lemon", "mango", "nectarine", "orange", "papaya", "quince", "raspberry", "strawberry", "tangerine", "watermelon"};
             }
         }
     }
@@ -22,5 +25,10 @@ public class Hangman {
     public static boolean playGame(Scanner scanner) {
         // TODO: Implement the game logic
         return false;
+    }
+    private static String getRandomWord() {
+        Random random = new Random();
+        int index = random.nextInt(words.length);
+        return words[index];
     }
 }
