@@ -24,7 +24,7 @@ You will also need to perform the following steps:
 - In `Settings -> Secrets and variables -> Actions`, enter your Open AI API key as `OPENAI_API_KEY`
 - In `Settings -> Actions -> General`, scroll down to `Workflow permissions` and enable `Allow Github Actions to create and approve pull requests`
 
-Whenever a new issue is opened or edited, the action will push a branch named `autopr/issue-#` and open a pull request to the base branch.
-Please note that if the branch already exists (on issue edit), it will be overwritten.
+Whenever the issue is labelled with a label that contains the string "AutoPR", the action will push a branch named `autopr/issue-#` and open a pull request to the base branch.
+Please note that if the branch already exists, it will be overwritten.
 
 If you'd like to try out GPT-4 AutoPR, you can make an issue in this repository, and I'll run it manually.
