@@ -1,4 +1,57 @@
 def display_board(board):
+    # Code for displaying the board
+    pass
+
+def check_winner(board):
+    # Code for checking the winner
+    pass
+
+def update_board(board, row, col, player):
+    board[row][col] = player
+    return board
+
+def get_user_input(player):
+    row = int(input(f"Player {player}, enter the row (0-2): "))
+    col = int(input(f"Player {player}, enter the column (0-2): "))
+    return row, col
+
+def is_valid_move(board, row, col):
+    return board[row][col] == " "
+
+def is_board_full(board):
+    for row in board:
+        if " " in row:
+            return False
+    return True
+
+def main():
+    board = [[" " for _ in range(3)] for _ in range(3)]
+    current_player = "X"
+
+    while not check_winner(board) and not is_board_full(board):
+        display_board(board)
+        row, col = get_user_input(current_player)
+
+        if not is_valid_move(board, row, col):
+            print("Invalid move, please try again.")
+            continue
+
+        update_board(board, row, col, current_player)
+
+        if check_winner(board):
+            display_board(board)
+            print(f"Player {current_player} wins!")
+            break
+        elif is_board_full(board):
+            display_board(board)
+            print("It's a draw!")
+            break
+        else:
+            current_player = "O" if current_player == "X" else "X"
+
+if __name__ == "__main__":
+    main()
+def display_board(board):
     # Code for displaying the board goes here
     pass
 
