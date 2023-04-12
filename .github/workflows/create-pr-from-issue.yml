@@ -37,11 +37,3 @@ jobs:
         event: ${{ toJson(github.event) }}
         event_name: ${{ github.event_name }}
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        codegen_agent_id: auto-v1
-        pull_request_agent_id: rail-v1
-        base_branch: main
-        model: gpt-4
-        context_limit: 8192
-        min_tokens: 1000
-        max_tokens: 2000
-        num_reasks: 2
