@@ -29,7 +29,9 @@ while running:
         elif event.type == KEYDOWN:
             if event.key == K_ESCAPE:
                 running = False
-    
+            elif event.key == K_r:
+                reset_game()
+
     # Update game logic
     # Paddle movement
     keys = pygame.key.get_pressed()
@@ -46,20 +48,19 @@ while running:
     LEFT_PADDLE.clamp_ip(screen.get_rect())
     RIGHT_PADDLE.clamp_ip(screen.get_rect())
 
-    # Ball movement
+    # Ball movement and scoring
     BALL.move_ip(2, 2)
     if BALL.colliderect(LEFT_PADDLE) or BALL.colliderect(RIGHT_PADDLE):
         BALL.x *= -1
-    if BALL.y <= 0 or BALL.y >= SCREEN_HEIGHT - 15:
-        BALL.y *= -1
-
-    # Redraw game objects
+    elif BALL.x <= 0 or BALL.x >= SCREEN_WIDTH - 15:
+        update_score()
+        reset_ball()
+        check_end_game_conditions()
     screen.fill(0)
     pygame.draw.rect(screen, WHITE, LEFT_PADDLE)
     pygame.draw.rect(screen, WHITE, RIGHT_PADDLE)
     pygame.draw.rect(screen, WHITE, BALL)
-
-    # Update the display
+    display_score()
     pygame.display.flip()
 
 # Clean up
