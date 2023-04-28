@@ -32,4 +32,9 @@ async def start(ctx, category: str):
         return
 
     selected_questions = [question for question in questions if question['category'] == categories[category]]
-    await display_leaderboard(ctx)
+    selected_questions = [question for question in questions if question['category'] == categories[category]]
+    question = random.choice(selected_questions)
+    question_text = question["question"]
+    options = [f"{index+1}. {option}" for index, option in enumerate(question["options"])]
+    await ctx.send(f"{question_text}\nOptions:\n{' '.join(options)}")
+    answer = await client.wait_for("message", check=lambda message: message.author == ctx.author, timeout=30)
