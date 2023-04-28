@@ -31,7 +31,9 @@ async def start(ctx, category: str):
         await ctx.send(f"Invalid category. Please choose from the following categories:\n{', '.join([f'{key}: {categories[key]}' for key in categories])}")
         return
 
-    selected_questions = [question for question in questions if question['category'] == categories[category]]
+    if ctx.author not in user_scores:
+        user_scores[ctx.author] = 0
+
     selected_questions = [question for question in questions if question['category'] == categories[category]]
     question = random.choice(selected_questions)
     question_text = question["question"]
