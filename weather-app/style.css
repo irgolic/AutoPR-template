@@ -59,11 +59,12 @@ button:hover {
 
 /* Weather Display */
 .weather-display {
-    text-align: center;
+  text-align: center;
+  background-color: var(--weather-color, #f3f3f3);
 }
 
 .weather-info {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
 }
