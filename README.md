@@ -1,15 +1,14 @@
 <div align="center">
 
-# 🚀 AutoPR Template 🚀
+# 🌳 AutoPR Template 🌳
 
-[![Discord](https://badgen.net/badge/icon/discord?icon=discord&label&color=purple)](https://discord.gg/ykk7Znt3K6)
+[![Discord](https://badgen.net/badge/icon/discord?icon=nope&label&color=purple)](https://discord.gg/ykk7Znt3K6)
+[![Docs](https://badgen.net/badge/icon/docs?icon=nope&label&color=blue)](https://docs.autopr.com)
 
-[AutoPR](https://github.com/irgolic/AutoPR) automatically writes pull requests in response to issues with ChatGPT.  
+[Main AutoPR repo](https://github.com/irgolic/AutoPR)
 
 </div>
 
-# 🛠 Usage
+## 🚀 Getting Started
 
-Please see [USAGE.md](https://github.com/irgolic/AutoPR/blob/main/USAGE.md) for more information.
-
-If you'd like to try out GPT-4 AutoPR, you can make an issue in this repository, and I'll run it manually.
+Please see the [installation guide](https://docs.autopr.com/docs/installation).
