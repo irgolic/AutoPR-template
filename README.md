@@ -11,4 +11,4 @@
 
 ## 🚀 Getting Started
 
-Please see the [installation guide](https://docs.autopr.com/docs/installation).
+Please see the [installation guide](https://docs.autopr.com/installing/github).
